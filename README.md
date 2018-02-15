@@ -1,4 +1,4 @@
-# Workshop-AIBOT
+# Workshop: Infuse some AI into your chat-robot
 
 ### Setup Azure
 
