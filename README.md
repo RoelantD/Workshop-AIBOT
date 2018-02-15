@@ -2,11 +2,19 @@
 
 ### Setup Azure
 
+### Setup Windows IOT
+
+### Install Hello world
+
+------------------
+
 ### Create project
 
 ### Setup Voice
 
 ### Connect LUIS
+
+------------------
 
 ### Call Face API
 
