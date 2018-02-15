@@ -1,6 +1,6 @@
 # Workshop-AIBOT
 
-## Setup Azure
+### Setup Azure
 
 ### Create project
 
