@@ -14,6 +14,7 @@
 * Connect the device to the WiFi
 * Reboot the device and wait for it to come back
 * Find the IOT Device in your Dashboard
+* On the device go to settings > cortana and enable Cortana (don't sign in only enable speech recognition)
 
 
 
