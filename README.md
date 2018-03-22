@@ -33,6 +33,10 @@
 
 ### Connect LUIS
 
+### Turn the light on
+
+## Talk back
+
 ------------------
 
 ### Call Face API
