@@ -19,6 +19,8 @@
 * IOT remote client (https://www.microsoft.com/nl-nl/store/p/windows-iot-remote-client/9nblggh5mnxz?rtc=1)
 
 ### Install Hello world
+* https://github.com/Microsoft/Windows-iotcore-samples/tree/master/Samples/SPIDisplay/CS
+
 
 ### Setup Azure
 
