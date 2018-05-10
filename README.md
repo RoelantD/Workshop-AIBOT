@@ -15,6 +15,7 @@
 * Reboot the device and wait for it to come back
 * Find the IOT Device in your Dashboard
 * On the device go to settings > cortana and enable Cortana (don't sign in only enable speech recognition)
+* Enable Enable Windows IoT Remote Server
 * IOT remote client (https://www.microsoft.com/nl-nl/store/p/windows-iot-remote-client/9nblggh5mnxz?rtc=1)
 
 ### Install Hello world
