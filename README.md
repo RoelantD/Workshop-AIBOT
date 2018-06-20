@@ -3,7 +3,7 @@
 ### Setup your Workstation
 * Visual Studio (C++ Development)
 * Latest SDK [website](https://developer.microsoft.com/nl-nl/windows/downloads/windows-10-sdk)
-* Connect to the workshop WiFi (Name: IOTBotWorkshop / Password: HerOes2018)
+* Connect to the workshop WiFi (Name: AIWorkshop / Password: HerOes2018)
 * 
 
 ### Setup Windows IOT
