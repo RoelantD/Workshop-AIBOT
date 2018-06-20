@@ -18,3 +18,9 @@
 #### Implement motion
 
 #### Implement Lamp
+
+
+## Resources
+
+
+* https://github.com/Azure-Samples/cognitive-services-onnx-customvision-sample
