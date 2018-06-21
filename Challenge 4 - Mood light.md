@@ -1,1 +1,1 @@
-# Challenge 4 - Mood light
+# Challenge 2 - Mood light
