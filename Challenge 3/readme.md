@@ -3,8 +3,10 @@
 
 Welcome to the Seeing PI challenge. In this challenge you are going to create your own custom vision model and run it on your Raspberry PI.
 
-### Challenge:
-Make a program that runs on your Rapsberry PI and can detect 3 different objects.
+> **Challenge**
+> Make a program that runs on your Rapsberry PI and can detect 3 different objects.
+
+### Requirements 
 - Use Custom Vision to train a model
 - Use the motion sensor to trigger to detection
 - Use the LED to show that the detection is in progress
