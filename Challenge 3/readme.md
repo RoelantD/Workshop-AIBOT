@@ -26,20 +26,28 @@ Welcome to the Seeing PI challenge. In this challenge you are going to create yo
 
 # Part 1 - Create your model
 
-#### Create your dataset
+### Create your dataset
 Find 3 objects in the room like your watch, phone, mouse, cup or any thing that classifies as an object.
 Make at least 15 photos from these objects. Make sure you use different angles and backgrounds.
-From the 15 pictures per object, set 2 aside for your 
+From the 15 pictures per object, set 2 aside for testing your model.
 
-#### Create a new project
+### Create a new project
 Go to the website: [customvision.ai](https://www.customvision.ai) and login with a Microsoft account. 
 
 ![alt text](assets/img_3001.jpg)
 
+### Upload & Tag your pictures
+After creating your project you can start uploading you images. The best way is to upload and tag your images per project.
 
-#### Upload & Tag your pictures
+![alt text](assets/img_3001.jpg)
 
-#### Train and test you model
+* Click "Add Images"
+* Click "Browse some local files"
+* Tag the images, type the tag and click on the + button
+* Click the upload button
+* Repeat these steps for all your objects
+
+### Train and test you model
 
 #### Export the model
 
