@@ -39,15 +39,30 @@ Go to the website: [customvision.ai](https://www.customvision.ai) and login with
 ### Upload & Tag your pictures
 After creating your project you can start uploading you images. The best way is to upload and tag your images per project.
 
-![alt text](assets/img_3001.jpg)
+![alt text](assets/img_3002.jpg)
 
 * Click "Add Images"
-* Click "Browse some local files"
+* Click "Browse some local files" (Can not exceed 4MB per image)
 * Tag the images, type the tag and click on the + button
 * Click the upload button
 * Repeat these steps for all your objects
 
-### Train and test you model
+### Train your model
+Now it is time to train your custom vision model. 
+![alt text](assets/img_3003.jpg)
+
+* Click in the top right on the green "Train" button
+The training will take only a few seconds. When you the training is done you will see the performance and recall of the model. This should be above 90% if not you have to take some better pictures ;)
+
+*Have a look at this screen and see that here you can find the API Endpoint and export the model*
+
+### Test your model
+Now you have trained the model it is time to test it.
+
+* Click on the ""
+
+
+
 
 #### Export the model
 
