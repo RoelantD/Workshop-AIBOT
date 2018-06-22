@@ -20,9 +20,9 @@ Welcome to the Seeing PI challenge. In this challenge you are going to create yo
 | **Modules** | Custom Vision |
 | **Sensors**| SPI Display / Motion Sensor / LED |  
 
-
+   
 [INSERT VIDEO]
-
+   
 
 # Part 1 - Create your model
 
@@ -49,6 +49,7 @@ After creating your project you can start uploading you images. The best way is 
 
 ### Train your model
 Now it is time to train your custom vision model. 
+   
 ![alt text](assets/img_3003.jpg)
 
 * Click in the top right on the green "Train" button     
@@ -60,14 +61,18 @@ The training will take only a few seconds. When the training is done you will se
 Now you have trained the model it is time to test it.   
    
 ![alt text](assets/img_3004.jpg)
-
+   
 Click the "Quick Test" button in the top right, upload an image and see the results!
 
 
-#### Export the model
-
-
-
+### Export the model
+If your model works with your test set of images it is time to export the model to run in offline.
+   
+![alt text](assets/img_3005.jpg)
+   
+* Open the tab "Performance"
+* Click on "Export"
+* Download the ONNX model
 
 
 ## Create the app
@@ -79,6 +84,7 @@ Click the "Quick Test" button in the top right, upload an image and see the resu
 #### Implement motion
 
 #### Implement Lamp
+
 
 
 ## Resources
