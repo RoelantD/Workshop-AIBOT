@@ -1,5 +1,5 @@
 
-# Challenge 3: Seeing PI #
+# The Seeing PI Challenge #
 
 Welcome to the Seeing PI challenge. In this challenge you are going to create your own custom vision model and run it on your Raspberry PI.
 
