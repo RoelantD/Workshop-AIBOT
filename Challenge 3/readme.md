@@ -3,7 +3,7 @@
 
 Welcome to the Seeing PI challenge. In this challenge you are going to create your own custom vision model and run it on your Raspberry PI.
 
-> **Challenge**
+> **Challenge**:   
 > Make a program that runs on your Rapsberry PI and can detect 3 different objects.
 
 ### Requirements 
