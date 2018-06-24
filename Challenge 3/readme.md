@@ -86,6 +86,7 @@ If your model works with your test set of images it is time to export the model 
 * Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
 
 
+### Camera
 
 #### Enable the Camera
 ![alt text](assets/img_3010.jpg)
@@ -100,7 +101,7 @@ If your model works with your test set of images it is time to export the model 
 * Add the code below between the <grid></grid> tags:
 ```         
 <StackPanel>
-   <TextBlock x:Name="StatusBlock" FontWeight="Bold" TextWrapping="Wrap" Text="...."/>
+   <TextBlock x:Name="StatusText" FontWeight="Bold" TextWrapping="Wrap" Text="...."/>
    <CaptureElement Name="PreviewControl" Stretch="Uniform"/>
 </StackPanel> 
 ```
@@ -120,8 +121,19 @@ private async Task StartVideoPreviewAsync()
    await _mediaCapture.StartPreviewAsync();
 }
 ```
+* Call the StartVideoPreviewAsync method from the constructor
+* Run the application and validate you can see the camera feed
 
 
+### Model
+* Rename the .onnx file you have downloaded in the previous step to "customvisionmodel.onnx" 
+* Copy the customvisionmodel.onnx file to the Assets folder 
+* Goto Solution Explorer in Visual Studio
+* Right click on the Assets Folder > Add > Existing Item > Select the "customvisionmodel.onnx" file and click add.
+* In the properties from the "customvisionmodel.onnx" set:  
+     Build Action: Content
+     Copy to output: Copy if newer
+* Verify that you have a new file in the root of your project called: "mycustomvision.cs"
 
 
 
