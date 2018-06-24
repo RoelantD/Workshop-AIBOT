@@ -1,4 +1,3 @@
-
 # The Seeing PI Challenge #
 
 Welcome to the Seeing PI challenge. In this challenge you are going to create your own custom vision model and run it on your Raspberry PI to detect objects.
@@ -288,6 +287,16 @@ List<string> linesToDisplay = loss.Take(4).Select(a => $"{a.Key} {(a.Value * 100
 _spiDisplay.WriteLinesToScreen(linesToDisplay);
 ```
 
+#### Run it on de device
+![alt text](assets/img_3015.jpg)
+* Select by debug the ARM profile
+* Select "Device" 
+* Type the IP address of your Raspberry PI
+* Select by protocol "Windows Universial"
+* Click select
+* Click the green play button to debug your solution on the PI
+
+*The first time it can take a while to deploy, so this is a good time for some coffee!*
 
 
 
