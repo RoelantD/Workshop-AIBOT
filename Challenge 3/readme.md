@@ -188,19 +188,20 @@ VideoProperties = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(M
 ```
 private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
 {
-   if (this._mediaCapture.CameraStreamState != Windows.Media.Devices.CameraStreamState.Streaming || !this._frameProcessingSemaphore.Wait(0))
+   if (_mediaCapture.CameraStreamState != Windows.Media.Devices.CameraStreamState.Streaming || !_frameProcessingSemaphore.Wait(0))
    {
        return;
    }
 
    try
    {
-       using (VideoFrame previewFrame = new VideoFrame(BitmapPixelFormat.Bgra8, (int)this.VideoProperties.Width, (int)this.VideoProperties.Height))
+       using (VideoFrame previewFrame = new VideoFrame(BitmapPixelFormat.Bgra8, (int)VideoProperties.Width, (int)VideoProperties.Height))
        {
            await _mediaCapture.GetPreviewFrameAsync(previewFrame);
 
            // Evaluate the image
            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Analyzing frame {DateTime.Now.ToLongTimeString()}");
+
        }
    }
    catch (Exception ex)
