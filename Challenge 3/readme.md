@@ -126,6 +126,8 @@ private async Task StartVideoPreviewAsync()
 
 
 ### Model
+
+#### Import the model
 * Rename the .onnx file you have downloaded in the previous step to "customvisionmodel.onnx" 
 * Copy the customvisionmodel.onnx file to the Assets folder 
 * Goto Solution Explorer in Visual Studio
@@ -134,11 +136,43 @@ private async Task StartVideoPreviewAsync()
      Build Action: Content
      Copy to output: Copy if newer
 * Verify that you have a new file in the root of your project called: "mycustomvision.cs"
+
+![alt text](assets/img_3012.jpg)
 * Open the file and replace the generated code:
 "**F8a23911_x002D_5b75_x002D_4e62_x002D_8bf7_x002D_a0645fdaf006_b5fd51a0_x002D_efd6_x002D_4400_x002D_af14_x002D_d5b0389eb89d**ModelInput"
 to
-public sealed class **CustomVisionModel**Input
-* Bla
+public sealed class **MyCustomVisionModel**Input
+* *Have a look at the "MyCustomVisionOutput" method and notice that you see you tags there, if your model changes you have to add or remove your new tags here.*
+
+#### Load the model
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```    
+private string _modelFileName = "mycustomvision.onnx";
+
+private MyCustomVisionModel _model = null;
+
+private async Task LoadModelAsync()
+{
+   await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Loading {_modelFileName}");
+
+   var modelFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri($"ms-appx:///Assets/{_modelFileName}"));
+   _model = await MyCustomVisionModel.CreateMyCustomVisionModel(modelFile);
+
+   await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Loaded {_modelFileName}");
+}
+```
+* Call the LoadModelAsync method from the constructor
+* Run the application and validate that the model is loaded
+
+### Analyzing the camera feed
+
+#### Setup the camera
+
+
+### Scoring the frames
+
+
 
 ## Enable the Screen
 
@@ -147,6 +181,4 @@ public sealed class **CustomVisionModel**Input
 
 
 ## Resources
-
-
 * https://github.com/Azure-Samples/cognitive-services-onnx-customvision-sample
