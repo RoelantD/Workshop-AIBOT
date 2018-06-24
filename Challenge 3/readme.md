@@ -265,6 +265,12 @@ await Task.Run(async () =>
 ```
 * Run the application and validate that you see the classification of every frame, you can hold the objects in front of the camera an see if it is working.
 
+![alt text](assets/img_3014.jpg)
+*You application should look like this now*
+
+### Running it on the RaspBerry PI 3
+
+#### Display the result on the SPI display
 
 
 
