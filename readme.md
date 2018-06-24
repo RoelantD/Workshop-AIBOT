@@ -5,8 +5,17 @@ In this workshop, we give you a quick start in this new world and introduce you 
 
 You are going to make a chatbot, not a boring one in a browser that can order airplane tickets for you, but a real robot that can talk to you and uses its vision and voice to interact with its surroundings.
 
+## Pre-workshop
 [Before you start](Before%20the%20workshop.md)
 
+
+## Exercises
+
+### Exercise 1 - Setup the board
+In this first exercise we are going to connect all the sensors to the RaspBerry PI.
+
+### Exercise 2 - Setup your workstation
+In this exercise we are going to deploy a Hello World app to the Raspberry
 
 ## Challenges
 
