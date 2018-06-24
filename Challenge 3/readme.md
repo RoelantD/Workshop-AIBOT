@@ -98,10 +98,12 @@ If your model works with your test set of images it is time to export the model 
 
 * Open the file: "MainPage.xaml"
 * Add the code below between the <grid></grid> tags:
-```         <StackPanel>
-            <TextBlock x:Name="StatusBlock" FontWeight="Bold" TextWrapping="Wrap" Text="...."/>
-            <CaptureElement Name="PreviewControl" Stretch="Uniform"/>
-        </StackPanel> ```
+```         
+<StackPanel>
+   <TextBlock x:Name="StatusBlock" FontWeight="Bold" TextWrapping="Wrap" Text="...."/>
+   <CaptureElement Name="PreviewControl" Stretch="Uniform"/>
+</StackPanel> 
+```
 
 
 
