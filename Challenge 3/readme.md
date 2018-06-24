@@ -242,7 +242,8 @@ private async Task EvaluateVideoFrameAsync(VideoFrame frame)
 
            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = message);
            Debug.WriteLine(message);
-
+            
+           // Insert Lines for SPI Display here
        }
        catch (Exception ex)
        {
@@ -271,6 +272,21 @@ await Task.Run(async () =>
 ### Running it on the RaspBerry PI 3
 
 #### Display the result on the SPI display
+* Add the SPIDisplay module to your project. [View module](../modules/SPIDisplay.cs)
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```
+private readonly SPIDisplay _spiDisplay = new SPIDisplay();
+```
+* Add the follow lines to the constructor:
+```
+ _spiDisplay.InitAll();
+```
+* Replace  "// Insert Lines for SPI Display here" in the "EvaluateVideoFrameAsync" method with:
+```
+List<string> linesToDisplay = loss.Take(4).Select(a => $"{a.Key} {(a.Value * 100.0f):#0.00}%").ToList();
+_spiDisplay.WriteLinesToScreen(linesToDisplay);
+```
 
 
 
