@@ -9,28 +9,41 @@ You are going to make a chatbot, not a boring one in a browser that can order ai
 [Before you start](Before%20the%20workshop.md)
 
 
+## Schedule
+| Time | Topic |
+| --- | --- |
+| 8:00 - 8:30 | Introduction
+| 8:30 - 9:30 | Exercise 1 & Exercise 2
+| 09:30 - 10:00 | Coffee break
+| 10:00 - 11:00 | Cognitive Services
+| 11:00 - 12:00 | Introduction to the Challenges
+| 12:00 - 13:00 | Lunch
+| 13:00 - 17:00 | Challenges
+
+
+
 ## Exercises
 
-### Exercise 1 - Setup the board
+#### Exercise 1 - Setup the board
 In this first exercise we are going to connect all the sensors to the RaspBerry PI.
 
-### Exercise 2 - Setup your workstation
+#### Exercise 2 - Setup your workstation
 In this exercise we are going to deploy a Hello World app to the Raspberry
 
 ## Challenges
 
-### Challenge 1 - Ask me PI
+#### Challenge 1 - Ask me PI
 In this challenge you are going to make you PI listen to you.     
 [Open challenge](Challenge%201/readme.md)
 
-### Challenge 2 - Mood PI
+#### Challenge 2 - Mood PI
 In this challenge you are going to make the PI is reflect you mood.    
 [Open challenge](Challenge%202/readme.md)
 
-### Challenge 3 - The Seeing PI
+#### Challenge 3 - The Seeing PI
 In this challenge you are going to teach your PI to detect objects.    
 [Open challenge](Challenge%203/readme.md)
 
-### Challenge 4 - Security PI
+#### Challenge 4 - Security PI
 In this challenge you are going to transform your PI in a security system.    
 [Open challenge](Challenge%204/readme.md)
