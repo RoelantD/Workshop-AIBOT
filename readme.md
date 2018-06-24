@@ -1,5 +1,5 @@
 # Build your own A.I. powered robot
-With the rise of new rapidly evolving interfaces and an explosion in intelligence services the need to jump on this track is more relevant than ever. With the commodity of hardware and the computing power of Azure Cloud, Artificial Intelligence is at our fingertips and waiting to be implemented in new innovative solutions. 
+**With the rise of new rapidly evolving interfaces and an explosion in intelligence services the need to jump on this track is more relevant than ever. With the commodity of hardware and the computing power of Azure Cloud, Artificial Intelligence is at our fingertips and waiting to be implemented in new innovative solutions.**
 
 In this workshop, we give you a quick start in this new world and introduce you to Windows IoT, micro controllers with some sensors and the power of Microsoft Cognitive Services. 
 
