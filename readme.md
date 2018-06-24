@@ -9,7 +9,7 @@ You are going to make a chatbot, not a boring one in a browser that can order ai
 
 ### Challenge 1 - Ask me PI
 In this challenge you are going to make you PI listen to you. 
-[Open challenge](Challenge 1/readme.md)
+[Open challenge](Challenge1/readme.md)
 
 ### Challenge 2 - Mood PI
 In this challenge you are going to make the PI is reflect you mood.
