@@ -89,7 +89,7 @@ If your model works with your test set of images it is time to export the model 
 ### Camera
 
 #### Enable the Camera
-![alt text](assets/img_3010.jpg)
+![alt text](assets/img_3011.jpg)
 
 * Open the "Package.appxmanifest" file
 * Open the tab: "Capabilities"
@@ -167,14 +167,61 @@ private async Task LoadModelAsync()
 
 ### Analyzing the camera feed
 
-#### Setup the camera
+#### Grabbing the frames from the camera
+
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```
+private readonly SemaphoreSlim _frameProcessingSemaphore = new SemaphoreSlim(1);
+
+private ThreadPoolTimer _frameProcessingTimer;
+
+public VideoEncodingProperties VideoProperties;
+```
+* Add this lines to the "StartVideoPreviewAsync" method
+```
+TimeSpan timerInterval = TimeSpan.FromMilliseconds(66); //15fps
+_frameProcessingTimer = ThreadPoolTimer.CreatePeriodicTimer(new TimerElapsedHandler(ProcessCurrentVideoFrame), timerInterval);
+VideoProperties = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview) as VideoEncodingProperties;
+```
+* Add this method
+```
+private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
+{
+   if (this._mediaCapture.CameraStreamState != Windows.Media.Devices.CameraStreamState.Streaming || !this._frameProcessingSemaphore.Wait(0))
+   {
+       return;
+   }
+
+   try
+   {
+       using (VideoFrame previewFrame = new VideoFrame(BitmapPixelFormat.Bgra8, (int)this.VideoProperties.Width, (int)this.VideoProperties.Height))
+       {
+           await _mediaCapture.GetPreviewFrameAsync(previewFrame);
+
+           // Evaluate the image
+           await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Analyzing frame {DateTime.Now.ToLongTimeString()}");
+       }
+   }
+   catch (Exception ex)
+   {
+       Debug.WriteLine("Exception with ProcessCurrentVideoFrame: " + ex);
+   }
+   finally
+   {
+       _frameProcessingSemaphore.Release();
+   }
+}
+```
 
 
-### Scoring the frames
+
+
+#### Scoring the frames
 
 
 
-## Enable the Screen
+
 
 
 
