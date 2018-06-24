@@ -75,15 +75,42 @@ If your model works with your test set of images it is time to export the model 
 * Download the ONNX model
 
 
-## Create the app
 
-#### Implement the model
+## Building the UWP App for IoT Core 10
 
-#### Implement screen
 
-#### Implement motion
+#### Create the app
+![alt text](assets/img_3010.jpg)
+* File > New Project
+* Select: Visual C > Windows Universial > Blank App (Universial App)
+* Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
 
-#### Implement Lamp
+
+
+#### Enable the Camera
+![alt text](assets/img_3010.jpg)
+
+* Open the "Package.appxmanifest" file
+* Open the tab: "Capabilities"
+* Check the checkbox "Webcam"
+
+#### Showing the camera feed
+
+* Open the file: "MainPage.xaml"
+* Add the code below between the <grid></grid> tags:
+```         <StackPanel>
+            <TextBlock x:Name="StatusBlock" FontWeight="Bold" TextWrapping="Wrap" Text="...."/>
+            <CaptureElement Name="PreviewControl" Stretch="Uniform"/>
+        </StackPanel> ```
+
+
+
+
+
+
+## Enable the Screen
+
+
 
 
 
