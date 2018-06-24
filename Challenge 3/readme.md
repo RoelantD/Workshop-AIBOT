@@ -184,7 +184,7 @@ TimeSpan timerInterval = TimeSpan.FromMilliseconds(66); //15fps
 _frameProcessingTimer = ThreadPoolTimer.CreatePeriodicTimer(new TimerElapsedHandler(ProcessCurrentVideoFrame), timerInterval);
 VideoProperties = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview) as VideoEncodingProperties;
 ```
-* Add this method
+* Add this method:
 ```
 private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
 {
@@ -214,13 +214,56 @@ private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
    }
 }
 ```
-
+![alt text](assets/img_3013.jpg)
+* Run the application and validate that every second a frame is analyzed
 
 
 
 #### Scoring the frames
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```
+private async Task EvaluateVideoFrameAsync(VideoFrame frame)
+{
+   if (frame != null)
+   {
+       try
+       {
 
+           MyCustomVisionModelInput inputData = new MyCustomVisionModelInput
+           {
+               data = frame
+           };
+           var results = await _model.EvaluateAsync(inputData);
+           var loss = results.loss.ToList().OrderByDescending(x => x.Value);
 
+           var lossStr = string.Join(",  ", loss.Select(l => l.Key + " " + (l.Value * 100.0f).ToString("#0.00") + "%"));
+           var message = $" Predictions: {lossStr}";
+
+           await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = message);
+           Debug.WriteLine(message);
+
+       }
+       catch (Exception ex)
+       {
+           Debug.WriteLine($"error: {ex.Message}");
+       }
+   }
+}
+```
+* In the "ProcessCurrentVideoFrame" method replace:
+```
+// Evaluate the image
+await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Analyzing frame {DateTime.Now.ToLongTimeString()}");
+```
+with
+```
+await Task.Run(async () =>
+{
+   await EvaluateVideoFrameAsync(previewFrame);
+});
+```
+* Run the application and validate that you see the classification of every frame, you can hold the objects in front of the camera an see if it is working.
 
 
 
