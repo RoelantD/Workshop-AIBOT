@@ -285,6 +285,17 @@ List<string> linesToDisplay = loss.Take(4).Select(a => $"{a.Key} {(a.Value * 100
 _spiDisplay.WriteLinesToScreen(linesToDisplay);
 ```
 
+
+### Connect the display to the RaspBerry
+
+Connect all the wires exactly the same as in the schema below.
+
+***Don't forget to remove the power***
+
+![alt text](assets/challenge_3_bb.png)
+
+
+
 ### Run it on de device
 ![alt text](assets/img_3015.jpg)
 * Select by debug the ARM profile
@@ -296,6 +307,9 @@ _spiDisplay.WriteLinesToScreen(linesToDisplay);
 
 *The first time it can take a while to deploy, so this is a good time for some coffee!*
 
+# Part 4 - Optional 
+
+* Connect the motion sensor and scan only when motion is detected
 
 
 
