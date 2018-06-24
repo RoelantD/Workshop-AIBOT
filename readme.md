@@ -5,6 +5,27 @@ In this workshop, we give you a quick start in this new world and introduce you 
 
 You are going to make a chatbot, not a boring one in a browser that can order airplane tickets for you, but a real robot that can talk to you and uses its vision and voice to interact with its surroundings.
 
+## Challenges
+
+### Challenge 1 - Ask me PI
+In this challenge you are going to make you PI listen to you. 
+[Open challenge](Challenge 1/readme.md)
+
+### Challenge 2 - Mood PI
+In this challenge you are going to make the PI is reflect you mood.
+[Open challenge](Challenge 2/readme.md)
+
+### Challenge 3 - The Seeing PI
+In this challenge you are going to teach your PI to detect objects.
+[Open challenge](Challenge 3/readme.md)
+
+### Challenge 4 - Security PI
+In this challenge you are going to transform your PI in a security system.
+[Open challenge](Challenge 4/readme.md)
+
+
+# Requirements
+
 ## What should you expect
 We are going to build a real bot powered by Microsoft Cognitive Services. The bot will run on a Raspberry PI powered by Windows IoT. Your bot will be able to see, hear and talk back to you.   
 
