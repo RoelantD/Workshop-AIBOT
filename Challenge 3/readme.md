@@ -1,4 +1,4 @@
-# The Seeing PI Challenge #
+# The Seeing PI #
 
 Welcome to the Seeing PI challenge. In this challenge you are going to create your own custom vision model and run it on your Raspberry PI to detect objects.
 
