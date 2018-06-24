@@ -134,8 +134,11 @@ private async Task StartVideoPreviewAsync()
      Build Action: Content
      Copy to output: Copy if newer
 * Verify that you have a new file in the root of your project called: "mycustomvision.cs"
-
-
+* Open the file and replace the generated code:
+"F8a23911_x002D_5b75_x002D_4e62_x002D_8bf7_x002D_a0645fdaf006_b5fd51a0_x002D_efd6_x002D_4400_x002D_af14_x002D_d5b0389eb89dModelInput"
+to
+public sealed class CustomVisionModelInput
+* Bla
 
 ## Enable the Screen
 
