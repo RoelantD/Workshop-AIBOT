@@ -75,26 +75,24 @@ If your model works with your test set of images it is time to export the model 
 
 
 
-## Building the UWP App for IoT Core 10
+# Part 2: Build the UWP App
 
-
-#### Create the app
+### Create the app
 ![alt text](assets/img_3010.jpg)
 * File > New Project
 * Select: Visual C > Windows Universial > Blank App (Universial App)
 * Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
 
+## 2.1 The camera
 
-### Camera
-
-#### Enable the Camera
+### Enable the Camera
 ![alt text](assets/img_3011.jpg)
 
 * Open the "Package.appxmanifest" file
 * Open the tab: "Capabilities"
 * Check the checkbox "Webcam"
 
-#### Showing the camera feed
+### Showing the camera feed
 
 * Open the file: "MainPage.xaml"
 * Add the code below between the <grid></grid> tags:
@@ -124,9 +122,9 @@ private async Task StartVideoPreviewAsync()
 * Run the application and validate you can see the camera feed
 
 
-### Model
+## 2.2 ONNX Model
 
-#### Import the model
+### Import the model
 * Rename the .onnx file you have downloaded in the previous step to "customvisionmodel.onnx" 
 * Copy the customvisionmodel.onnx file to the Assets folder 
 * Goto Solution Explorer in Visual Studio
@@ -143,7 +141,7 @@ to
 public sealed class **MyCustomVisionModel**Input
 * *Have a look at the "MyCustomVisionOutput" method and notice that you see you tags there, if your model changes you have to add or remove your new tags here.*
 
-#### Load the model
+### Load the model
 * Open the file: "MainPage.xaml.cs
 * Add this code to the class: "MainPage"
 ```    
@@ -164,9 +162,9 @@ private async Task LoadModelAsync()
 * Call the LoadModelAsync method from the constructor
 * Run the application and validate that the model is loaded
 
-### Analyzing the camera feed
+## 2.3 Analyze the camera feed
 
-#### Grabbing the frames from the camera
+### Grabbing the frames from the camera
 
 * Open the file: "MainPage.xaml.cs
 * Add this code to the class: "MainPage"
@@ -218,7 +216,7 @@ private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
 
 
 
-#### Scoring the frames
+### Scoring the frames
 * Open the file: "MainPage.xaml.cs
 * Add this code to the class: "MainPage"
 ```
@@ -268,9 +266,9 @@ await Task.Run(async () =>
 ![alt text](assets/img_3014.jpg)
 *You application should look like this now*
 
-### Running it on the RaspBerry PI 3
+# Part 3 - Run it on the RaspBerry PI 3
 
-#### Display the result on the SPI display
+### Display the result on the SPI display
 * Add the SPIDisplay module to your project. [View module](../modules/SPIDisplay.cs)
 * Open the file: "MainPage.xaml.cs
 * Add this code to the class: "MainPage"
@@ -287,7 +285,7 @@ List<string> linesToDisplay = loss.Take(4).Select(a => $"{a.Key} {(a.Value * 100
 _spiDisplay.WriteLinesToScreen(linesToDisplay);
 ```
 
-#### Run it on de device
+### Run it on de device
 ![alt text](assets/img_3015.jpg)
 * Select by debug the ARM profile
 * Select "Device" 
