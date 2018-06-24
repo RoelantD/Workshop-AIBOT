@@ -104,7 +104,22 @@ If your model works with your test set of images it is time to export the model 
    <CaptureElement Name="PreviewControl" Stretch="Uniform"/>
 </StackPanel> 
 ```
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```
+private readonly DisplayRequest _displayRequest = new DisplayRequest();
 
+private readonly MediaCapture _mediaCapture = new MediaCapture();
+
+private async Task StartVideoPreviewAsync()
+{
+   await _mediaCapture.InitializeAsync();
+   _displayRequest.RequestActive();
+
+   PreviewControl.Source = _mediaCapture;
+   await _mediaCapture.StartPreviewAsync();
+}
+```
 
 
 
