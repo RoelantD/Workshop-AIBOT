@@ -5,6 +5,9 @@ In this workshop, we give you a quick start in this new world and introduce you 
 
 You are going to make a chatbot, not a boring one in a browser that can order airplane tickets for you, but a real robot that can talk to you and uses its vision and voice to interact with its surroundings.
 
+[Before the workshop](Before%20the%20workshop.md)
+
+
 ## Challenges
 
 ### Challenge 1 - Ask me PI
