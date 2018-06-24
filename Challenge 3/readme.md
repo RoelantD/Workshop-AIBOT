@@ -19,8 +19,8 @@ Welcome to the Seeing PI challenge. In this challenge you are going to create yo
 | **Modules** | Custom Vision |
 | **Sensors**| SPI Display / Motion Sensor / LED |  
 
-   
-[INSERT VIDEO]
+### Video result:   
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/eAwKak3HtyE/0.jpg)](https://www.youtube.com/watch?v=eAwKak3HtyE)
    
 
 # Part 1 - Create your model
