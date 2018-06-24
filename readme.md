@@ -8,19 +8,19 @@ You are going to make a chatbot, not a boring one in a browser that can order ai
 ## Challenges
 
 ### Challenge 1 - Ask me PI
-In this challenge you are going to make you PI listen to you. 
+In this challenge you are going to make you PI listen to you.     
 [Open challenge](Challenge%201/readme.md)
 
 ### Challenge 2 - Mood PI
-In this challenge you are going to make the PI is reflect you mood.
+In this challenge you are going to make the PI is reflect you mood.    
 [Open challenge](Challenge%202/readme.md)
 
 ### Challenge 3 - The Seeing PI
-In this challenge you are going to teach your PI to detect objects.
+In this challenge you are going to teach your PI to detect objects.    
 [Open challenge](Challenge%203/readme.md)
 
 ### Challenge 4 - Security PI
-In this challenge you are going to transform your PI in a security system.
+In this challenge you are going to transform your PI in a security system.    
 [Open challenge](Challenge%204/readme.md)
 
 
