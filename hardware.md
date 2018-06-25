@@ -1,6 +1,6 @@
 # Hardware List
 
-- [Raspberry Pi 3 - Model B](https://www.adafruit.com/product/3055) or [Raspberry Pi 3 - Model B+](https://www.adafruit.com/product/3775)
+- [Raspberry Pi 3 - Model B](https://www.adafruit.com/product/3055)
 - [Raspberry Pi 2.5A power](https://www.sossolutions.nl/originele-raspberry-pi-foundation-2-5a-voeding-met-4-pluggen)
 - [PIR (motion) sensor](http://www.adafruit.com/products/189)
 - [DS18B20 Digital temperature sensor + extras](http://www.adafruit.com/products/374)
