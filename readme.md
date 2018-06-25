@@ -7,7 +7,7 @@ You are going to make a chatbot, not a boring one in a browser that can order ai
 
 ## Pre-workshop
 [Before you start](Before%20the%20workshop.md)
-
+[Hardware](Hardware.md)
 
 ## Schedule
 | Time | Topic |
