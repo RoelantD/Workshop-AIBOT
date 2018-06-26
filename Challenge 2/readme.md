@@ -21,7 +21,16 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 | **Modules** | Emotion API |
 | **Sensors**| RGB LED / Motion Sensor / Camera |  
 
-## Part 1 - Create the emotions API
+## Part 1 - Create a face API
+
+* Login to the Azure Portal
+* Create a Face API Endpoint [Create endpoint](https://portal.azure.com/#create/Microsoft.CognitiveServicesFace)
+![alt text](assets/img_2001.jpg)
+
+* Open your newly created Face API and copy the "API Key" and remember the region
+![alt text](assets/img_2002.jpg)
+
+
 
 ## Part 2: Build the UWP App
 
