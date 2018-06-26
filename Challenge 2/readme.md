@@ -21,8 +21,8 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 | **Modules** | Emotion API |
 | **Sensors**| RGB LED / Motion Sensor / Camera |  
 
-# Part 1 - Create the emotions API
+## Part 1 - Create the emotions API
 
-# Part 2: Build the UWP App
+## Part 2: Build the UWP App
 
-# Part 3 - Run it on the RaspBerry PI 3
+## Part 3 - Run it on the RaspBerry PI 3
