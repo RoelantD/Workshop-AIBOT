@@ -76,6 +76,58 @@ private async Task StartVideoPreviewAsync()
 * Call the StartVideoPreviewAsync method from the constructor
 * Run the application and validate you can see the camera feed
 
+## 2.2 Analyze the camera feed
+
+### Grabbing the frames from the camera
+
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```
+private readonly SemaphoreSlim _frameProcessingSemaphore = new SemaphoreSlim(1);
+
+private ThreadPoolTimer _frameProcessingTimer;
+
+public VideoEncodingProperties VideoProperties;
+```
+* Add this lines to the "StartVideoPreviewAsync" method
+```
+TimeSpan timerInterval = TimeSpan.FromMilliseconds(66); //15fps
+_frameProcessingTimer = ThreadPoolTimer.CreatePeriodicTimer(new TimerElapsedHandler(ProcessCurrentVideoFrame), timerInterval);
+VideoProperties = _mediaCapture.VideoDeviceController.GetMediaStreamProperties(MediaStreamType.VideoPreview) as VideoEncodingProperties;
+```
+* Add this method:
+```
+private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
+{
+   if (_mediaCapture.CameraStreamState != Windows.Media.Devices.CameraStreamState.Streaming || !_frameProcessingSemaphore.Wait(0))
+   {
+       return;
+   }
+
+   try
+   {
+       using (VideoFrame previewFrame = new VideoFrame(BitmapPixelFormat.Bgra8, (int)VideoProperties.Width, (int)VideoProperties.Height))
+       {
+           await _mediaCapture.GetPreviewFrameAsync(previewFrame);
+
+           // Evaluate the image
+           await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Analyzing frame {DateTime.Now.ToLongTimeString()}");
+
+       }
+   }
+   catch (Exception ex)
+   {
+       Debug.WriteLine("Exception with ProcessCurrentVideoFrame: " + ex);
+   }
+   finally
+   {
+       _frameProcessingSemaphore.Release();
+   }
+}
+```
+![alt text](assets/img_3013.jpg)
+* Run the application and validate that every second a frame is analyzed
+
 
 
 
