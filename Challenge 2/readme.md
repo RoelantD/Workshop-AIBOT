@@ -106,12 +106,8 @@ private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
 
    try
    {
-       using (VideoFrame previewFrame = new VideoFrame(BitmapPixelFormat.Bgra8, (int)VideoProperties.Width, (int)VideoProperties.Height))
-       {
-           await _mediaCapture.GetPreviewFrameAsync(previewFrame);
-
-           // Evaluate the image
-           await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Analyzing frame {DateTime.Now.ToLongTimeString()}");
+        // Evaluate the image
+        await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Analyzing frame {DateTime.Now.ToLongTimeString()}");
 
        }
    }
@@ -124,12 +120,26 @@ private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
        _frameProcessingSemaphore.Release();
    }
 }
+
+private async Task<MemoryStream> ConvertFromInMemoryRandomAccessStream(InMemoryRandomAccessStream inputStream)
+{
+    var reader = new DataReader(inputStream.GetInputStreamAt(0));
+    var bytes = new byte[inputStream.Size];
+    await reader.LoadAsync((uint)inputStream.Size);
+    reader.ReadBytes(bytes);
+
+    var outputStream = new MemoryStream(bytes);
+    return outputStream;
+}
+
 ```
 ![alt text](assets/img_3013.jpg)
 * Run the application and validate that every second a frame is analyzed
 
 
-
+## Add the face API
+* Add the NuGet package Microsoft.ProjectOxford.Face
+* 
 
 
 
