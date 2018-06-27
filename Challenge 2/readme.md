@@ -50,7 +50,7 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 ### Showing the camera feed
 
 * Open the file: "MainPage.xaml"
-* Add the code below between the <grid></grid> tags:
+* Add the code below between the "grid" tags:
 ```         
 <StackPanel>
    <TextBlock x:Name="StatusText" FontWeight="Bold" TextWrapping="Wrap" Text="...."/>
