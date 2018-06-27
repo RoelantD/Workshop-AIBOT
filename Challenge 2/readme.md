@@ -176,3 +176,49 @@ await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text =
 
 
 ## Part 3 - Run it on the RaspBerry PI 3
+
+
+## Adding the motion sensor
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```
+private bool _motion;
+
+private GpioPin _motionPin;
+
+private void InitPirSensor() {
+    try
+    {
+        var gpio = GpioController.GetDefault();
+        // Init the motion Sensor
+        _motionPin = gpio.OpenPin(21);
+        if (_motionPin != null)
+        {
+            _motionPin.SetDriveMode(GpioPinDriveMode.Input);
+            _motionPin.ValueChanged += PirSensorChanged;
+        }
+    }
+    catch (Exception e)
+    {
+        Debug.WriteLine("No GPIO ports found");
+        _motion = true;
+    }
+}
+
+private void PirSensorChanged(GpioPin sender, GpioPinValueChangedEventArgs args)
+{
+    _motion = (args.Edge == GpioPinEdge.RisingEdge);
+}
+
+```
+*This codes enables the motion detection and sets the variable _motion true when motion is detected. If the motion sensor is not detected then _motion is set to true by default*
+* Wrap the code you have added in the "try" statement of the "ProcessCurrentVideoFrame" method with:
+```
+if(_motion) {
+ // Code from the previous step
+}
+```
+
+
+## Adding the lights
+
