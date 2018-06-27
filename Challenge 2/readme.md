@@ -108,8 +108,7 @@ private async void ProcessCurrentVideoFrame(ThreadPoolTimer timer)
    {
         // Evaluate the image
         await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = $"Analyzing frame {DateTime.Now.ToLongTimeString()}");
-
-       }
+ 
    }
    catch (Exception ex)
    {
@@ -138,10 +137,42 @@ private async Task<MemoryStream> ConvertFromInMemoryRandomAccessStream(InMemoryR
 
 
 ## Add the face API
+* Open the file: "MainPage.xaml.cs
 * Add the NuGet package Microsoft.ProjectOxford.Face
-* 
+* Add this code to the class: "MainPage"
+```
+private FaceServiceClient _faceServiceClient = new FaceServiceClient("1ce384247278493bb7961773fabb679f", "https://westeurope.api.cognitive.microsoft.com/face/v1.0");
 
+public class EmotionResult
+{
+    public string Name { get; set; }
 
+    public float Score { get; set; }
+}
+```
+* In the "try" statement replace of the "ProcessCurrentVideoFrame" method replace everything with the code below:
+```
+var stream = new InMemoryRandomAccessStream();
+await _mediaCapture.CapturePhotoToStreamAsync(ImageEncodingProperties.CreateJpeg(), stream);
+MemoryStream memStream = await ConvertFromInMemoryRandomAccessStream(stream);
+
+Face[] result = await _faceServiceClient.DetectAsync(memStream, false, false, new[] { FaceAttributeType.Emotion });
+
+string displayText = $"{result.Length} faces found | {DateTime.Now.ToLongTimeString()}";
+
+if (result.Any())
+{
+    List<EmotionResult> emotions = new List<EmotionResult>();
+    emotions.Add(new EmotionResult() { Name = "Anger", Score = result.First().FaceAttributes.Emotion.Anger });
+    emotions.Add(new EmotionResult() { Name = "Happiness", Score = result.First().FaceAttributes.Emotion.Happiness });
+    emotions.Add(new EmotionResult() { Name = "Neutral", Score = result.First().FaceAttributes.Emotion.Neutral });
+
+    displayText += string.Join(", ", emotions.Select(a => $"{a.Name}: {(a.Score * 100.0f).ToString("#0.00")}"));
+}
+await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text = displayText);
+
+```
+* Run the program and see the classification of the shown emotions.
 
 
 ## Part 3 - Run it on the RaspBerry PI 3
