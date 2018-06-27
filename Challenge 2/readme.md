@@ -30,8 +30,56 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 * Open your newly created Face API and copy the "API Key" and remember the region
 ![alt text](assets/img_2002.jpg)
 
+# Part 2: Build the UWP App
+
+### Create the app
+![alt text](assets/img_2002.jpg)
+* File > New Project
+* Select: Visual C > Windows Universial > Blank App (Universial App)
+* Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
+
+## 2.1 The camera
+
+### Enable the Camera
+![alt text](assets/img_3011.jpg)
+
+* Open the "Package.appxmanifest" file
+* Open the tab: "Capabilities"
+* Check the checkbox "Webcam"
+
+### Showing the camera feed
+
+* Open the file: "MainPage.xaml"
+* Add the code below between the <grid></grid> tags:
+```         
+<StackPanel>
+   <TextBlock x:Name="StatusText" FontWeight="Bold" TextWrapping="Wrap" Text="...."/>
+   <CaptureElement Name="PreviewControl" Stretch="Uniform"/>
+</StackPanel> 
+```
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```
+private readonly DisplayRequest _displayRequest = new DisplayRequest();
+
+private readonly MediaCapture _mediaCapture = new MediaCapture();
+
+private async Task StartVideoPreviewAsync()
+{
+   await _mediaCapture.InitializeAsync();
+   _displayRequest.RequestActive();
+
+   PreviewControl.Source = _mediaCapture;
+   await _mediaCapture.StartPreviewAsync();
+}
+```
+* Call the StartVideoPreviewAsync method from the constructor
+* Run the application and validate you can see the camera feed
 
 
-## Part 2: Build the UWP App
+
+
+
+
 
 ## Part 3 - Run it on the RaspBerry PI 3
