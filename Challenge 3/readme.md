@@ -95,7 +95,7 @@ If your model works with your test set of images it is time to export the model 
 ### Showing the camera feed
 
 * Open the file: "MainPage.xaml"
-* Add the code below between the <grid></grid> tags:
+* Add the code below between the "grid" tags:
 ```         
 <StackPanel>
    <TextBlock x:Name="StatusText" FontWeight="Bold" TextWrapping="Wrap" Text="...."/>
