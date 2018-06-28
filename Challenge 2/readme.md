@@ -24,7 +24,9 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 ## Part 1 - Create a face API
 
 * Login to the Azure Portal
+
 ![alt text](Assets/img_2001.jpg)
+
 * Create a Face API Endpoint [Create endpoint](https://portal.azure.com/#create/Microsoft.CognitiveServicesFace)
 
 ![alt text](Assets/img_2002.jpg)
@@ -33,7 +35,9 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 # Part 2: Build the UWP App
 
 ### Create the app
+
 ![alt text](Assets/img_3010.jpg)
+
 * File > New Project
 * Select: Visual C > Windows Universial > Blank App (Universial App)
 * Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
@@ -176,6 +180,12 @@ await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text =
 
 
 ## Part 3 - Run it on the RaspBerry PI 3
+![alt text](Assets/challenge_2_bb.png)  
+
+* Connect the display to the RaspBerry
+* Connect all the wires exactly the same as in the schema below.
+
+*Don't forget to remove the power*
 
 
 ### Adding the motion sensor
@@ -233,7 +243,7 @@ public LedStatus LedStatus { get; set; }
 ```
  _rgbLed.TurnOnLed(emotions.OrderByDescending(a => a.Score).First().LedStatus);
 ```
-  
+
 ### Run it on the device
 ![alt text](Assets/img_3015.jpg)
 * Select by debug the ARM profile
