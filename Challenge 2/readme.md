@@ -27,7 +27,7 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 ![alt text](Assets/img_2001.jpg)
 * Create a Face API Endpoint [Create endpoint](https://portal.azure.com/#create/Microsoft.CognitiveServicesFace)
 
-![alt text](assets/img_2002.jpg)
+![alt text](Assets/img_2002.jpg)
 * Open your newly created Face API and copy the "API Key" and remember the region
 
 # Part 2: Build the UWP App
