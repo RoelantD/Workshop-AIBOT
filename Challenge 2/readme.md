@@ -223,7 +223,7 @@ if (!_motion)
 ```
 
 ### Adding the lights
-* Add the RGBLed module to your project. [View module](../Modules/RGBLed.cs)
+* Add the RGBLed module to your project. [View module](../modules/RGBLed.cs)
 * Open the file: "MainPage.xaml.cs
 * Add the property "LedStatus" to the class: "EmotionResult"
 ```
