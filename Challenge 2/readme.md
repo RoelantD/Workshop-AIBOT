@@ -178,7 +178,7 @@ await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text =
 ## Part 3 - Run it on the RaspBerry PI 3
 
 
-## Adding the motion sensor
+### Adding the motion sensor
 * Open the file: "MainPage.xaml.cs
 * Add this code to the class: "MainPage"
 ```
@@ -222,5 +222,14 @@ if (!_motion)
 }
 ```
 
-## Adding the lights
-
+### Adding the lights
+* Add the RGBLed module to your project. [View module](../Modules/RGBLed.cs)
+* Open the file: "MainPage.xaml.cs
+* Add the property "LedStatus" to the class: "EmotionResult"
+```
+public LedStatus LedStatus { get; set; }
+```
+* Add this line after: "List<EmotionResult> emotions = ...." in the method "ProcessCurrentVideoFrame"
+```
+ _rgbLed.TurnOnLed(emotions.OrderByDescending(a => a.Score).First().LedStatus);
+```
