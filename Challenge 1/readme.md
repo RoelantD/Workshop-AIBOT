@@ -3,7 +3,7 @@
 
 ## LUIS
 
-## Setup LUIS
+### Setup LUIS
 * Go to [LUIS.AI](https://www.luis.ai) 
 * Login with your Microsoft Pasport.
 
@@ -35,5 +35,40 @@
 * Enter a name: "LedState"
 * Click "done"
 * Create another Entity "LedColor"
+
+![](Assets/img_luis_1006.jpg)
+* Open "Intents"
+* Open the intent "ControlLED"
+* Click on the word "on"
+* Select the Entity "LedState" in the dropdown
+* Repeat this for all the words: "on" and "off"
+* Select all the colors and link them to the entity "LedColor"
+
+![](Assets/img_luis_1007.jpg)
+* Your project should look the picture up.
+
+* Click the "train" button in the top right
+* When the training is done click the "test" button
+
+![](Assets/img_luis_1008.jpg)
+* Type the sentence: "turn the yellow light on"
+* Notice that the word "yellow" and "on" are mapped to the corresponding entities.
+* Try some other sentence
+
+![](Assets/img_luis_1008.jpg)
+* Open the "publish" section
+* Publish the app to production
+* Scroll down en copy the API key
+* Open the "settings" section 
+* Copy the application id
+
+
+### APP
+
+
+### 
+* Add the nuget package: "Microsoft.Cognitive.LUIS"
+
+
 
 
