@@ -6,8 +6,11 @@ In this workshop, we give you a quick start in this new world and introduce you 
 You are going to make a chatbot, not a boring one in a browser that can order airplane tickets for you, but a real robot that can talk to you and uses its vision and voice to interact with its surroundings.
 
 ## Pre-workshop
-[Before you start](Before%20the%20workshop.md)
-[Hardware](Hardware.md)
+* [Before you start](Before%20the%20workshop.md)
+* [Hardware](Hardware.md)
+
+## Wifi
+
 
 ## Schedule
 | Time | Topic |
