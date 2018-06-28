@@ -141,7 +141,7 @@ private async Task<MemoryStream> ConvertFromInMemoryRandomAccessStream(InMemoryR
 * Add the NuGet package Microsoft.ProjectOxford.Face
 * Add this code to the class: "MainPage"
 ```
-private FaceServiceClient _faceServiceClient = new FaceServiceClient("1ce384247278493bb7961773fabb679f", "https://westeurope.api.cognitive.microsoft.com/face/v1.0");
+private FaceServiceClient _faceServiceClient = new FaceServiceClient("<APIKEY>", "https://<REGION>.api.cognitive.microsoft.com/face/v1.0");
 
 public class EmotionResult
 {
