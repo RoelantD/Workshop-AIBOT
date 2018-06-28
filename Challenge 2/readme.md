@@ -132,7 +132,7 @@ private async Task<MemoryStream> ConvertFromInMemoryRandomAccessStream(InMemoryR
 }
 
 ```
-![alt text](assets/img_2003.jpg)
+![alt text](Assets/img_2003.jpg)
 * Run the application and validate that every second a frame is analyzed
 
 
