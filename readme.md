@@ -10,7 +10,11 @@ You are going to make a chatbot, not a boring one in a browser that can order ai
 * [Hardware](Hardware.md)
 
 ## Wifi
+Connect to the workshop WiFi 
 
+| Name | Password |
+| --- | --- |
+| AIWorkshop | HerOes2018
 
 ## Schedule
 | Time | Topic |
@@ -22,8 +26,6 @@ You are going to make a chatbot, not a boring one in a browser that can order ai
 | 11:00 - 12:00 | Introduction to the Challenges
 | 12:00 - 13:00 | Lunch
 | 13:00 - 17:00 | Challenges
-
-
 
 ## Exercises
 
