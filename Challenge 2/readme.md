@@ -132,11 +132,11 @@ private async Task<MemoryStream> ConvertFromInMemoryRandomAccessStream(InMemoryR
 }
 
 ```
-![alt text](assets/img_3013.jpg)
+![alt text](assets/img_2003.jpg)
 * Run the application and validate that every second a frame is analyzed
 
 
-## Add the face API
+## 2.3 Add the face API
 * Open the file: "MainPage.xaml.cs
 * Add the NuGet package Microsoft.ProjectOxford.Face
 * Add this code to the class: "MainPage"
