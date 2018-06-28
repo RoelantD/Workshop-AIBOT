@@ -233,3 +233,17 @@ public LedStatus LedStatus { get; set; }
 ```
  _rgbLed.TurnOnLed(emotions.OrderByDescending(a => a.Score).First().LedStatus);
 ```
+  
+### Run it on the device
+![alt text](Assets/img_3015.jpg)
+* Select by debug the ARM profile
+* Select "Device"
+* Type the IP address of your Raspberry PI
+* Select by protocol "Windows Universial"
+* Click select
+* Click the green play button to debug your solution on the PI
+* The first time it can take a while to deploy, so this is a good time for some coffee!
+
+## Optional
+* Turn a LED on when motion is detected
+* Use the display to show details detected by the Face API (Like: Hair color / Glasses / Age)
