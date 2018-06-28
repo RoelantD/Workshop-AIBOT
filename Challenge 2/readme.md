@@ -33,7 +33,7 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 # Part 2: Build the UWP App
 
 ### Create the app
-![alt text](Assets/img_2002.jpg)
+![alt text](Assets/img_3010.jpg)
 * File > New Project
 * Select: Visual C > Windows Universial > Blank App (Universial App)
 * Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
