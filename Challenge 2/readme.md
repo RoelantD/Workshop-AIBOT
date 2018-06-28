@@ -24,16 +24,16 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 ## Part 1 - Create a face API
 
 * Login to the Azure Portal
+![alt text](Assets/img_2001.jpg)
 * Create a Face API Endpoint [Create endpoint](https://portal.azure.com/#create/Microsoft.CognitiveServicesFace)
-![alt text](assets/img_2001.jpg)
 
-* Open your newly created Face API and copy the "API Key" and remember the region
 ![alt text](assets/img_2002.jpg)
+* Open your newly created Face API and copy the "API Key" and remember the region
 
 # Part 2: Build the UWP App
 
 ### Create the app
-![alt text](assets/img_2002.jpg)
+![alt text](Assets/img_2002.jpg)
 * File > New Project
 * Select: Visual C > Windows Universial > Blank App (Universial App)
 * Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
@@ -41,7 +41,7 @@ Welcome to the Mood PI challenge. In this challenge you are going to make the PI
 ## 2.1 The camera
 
 ### Enable the Camera
-![alt text](assets/img_3011.jpg)
+![alt text](Assets/img_3011.jpg)
 
 * Open the "Package.appxmanifest" file
 * Open the tab: "Capabilities"
@@ -212,13 +212,15 @@ private void PirSensorChanged(GpioPin sender, GpioPinValueChangedEventArgs args)
 
 ```
 *This codes enables the motion detection and sets the variable _motion true when motion is detected. If the motion sensor is not detected then _motion is set to true by default*
-* Wrap the code you have added in the "try" statement of the "ProcessCurrentVideoFrame" method with:
+* Add the code below before the "try" statement of the "ProcessCurrentVideoFrame" method:
 ```
-if(_motion) {
- // Code from the previous step
+if (!_motion)
+{
+    Debug.WriteLine("No motion detected.");
+    _frameProcessingSemaphore.Release();
+    return;
 }
 ```
-
 
 ## Adding the lights
 
