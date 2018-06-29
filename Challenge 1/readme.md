@@ -1,7 +1,7 @@
 # Ask me PI
 
 
-## LUIS
+## Part 1 - Language Understanding
 
 ### Setup LUIS
 * Go to [LUIS.AI](https://www.luis.ai) 
@@ -63,12 +63,19 @@
 * Copy the application id
 
 
-### APP
+## Part 2 - Build the UWP App
 
 
 ### 
 * Add the nuget package: "Microsoft.Cognitive.LUIS"
 
 
+## Part 3 - Run it on the RaspBerry PI 3
+![alt text](Assets/challenge_2_bb.png)  
+
+* Connect the display to the RaspBerry
+* Connect all the wires exactly the same as in the schema below.
+
+*Don't forget to remove the power*
 
 
