@@ -5,7 +5,7 @@ We are going to build a real bot powered by Microsoft Cognitive Services. The bo
 
 **Topics covered in this workshop:**
 - Windows IoT
-- Raspberry PI and some sensors
+- Raspberry PI and some sensors.
 - Cognitive Services (Like: Face API / Speech API / and more…)
 - Language Understanding Intelligent Service
 
