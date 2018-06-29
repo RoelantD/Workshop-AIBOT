@@ -71,7 +71,7 @@
 
 
 ## Part 3 - Run it on the RaspBerry PI 3
-![alt text](Assets/challenge_2_bb.png)  
+![alt text](Assets/challenge_1_bb.png)  
 
 * Connect the display to the RaspBerry
 * Connect all the wires exactly the same as in the schema below.
