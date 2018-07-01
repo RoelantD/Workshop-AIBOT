@@ -45,7 +45,7 @@
 * Select all the colors and link them to the entity "LedColor"
 
 ![](Assets/img_luis_1007.jpg)
-* Your project should look the picture up.
+* Your project should look the picture above.
 
 * Click the "train" button in the top right
 * When the training is done click the "test" button
