@@ -27,7 +27,7 @@ Just bring your laptop running Windows with Visual Studio 2017. You will need an
  - Open: Update & Security
  - Open: For Developers
  - Select: "Developer Mode" under "Use developer features"
- - [View screenshot](assets/img_0001.jpg)
+ - [View screenshot](assets/img_0001.jpg) <-- de link werkt niet
 
 ### Note:
  - A remote desktop in Azure will **not work** as you need to access the local network
