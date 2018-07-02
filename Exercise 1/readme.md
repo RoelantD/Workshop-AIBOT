@@ -1,16 +1,16 @@
 # Setup the board
 
-#### 1. Download and install IoT dashboard
+### 1. Download and install IoT dashboard
 Download and install the IoT dashboard tool. 
 [Download](http://go.microsoft.com/fwlink/?LinkID=708576)
 
-#### 2. Connect the wires
+### 2. Connect the wires
 ![](Assets/wires.png)
 
-#### 3. Bootup the device
+### 3. Bootup the device
 Connect the Raspberry to the power.
 
-### Open the dashboard
+### 4. Open the dashboard
 * Open the IoT Dashboard tool and find your device in the list. 
 * Click on the ... under actions and select "Open device portal"
 * Login in to the device using the details below 
@@ -22,10 +22,10 @@ Connect the Raspberry to the power.
 * Have a look around in the dashboard
 
 
-### Install the program
+### 5. Install the program
 
 
-### Validate your setup
+### 6. Validate your setup
 - RGB Led - Should be showing every 1 second a different color
 - Display - Should show the current time & temperature
 - Motion Sensor / Yellow LED - When motion is triggered the yellow led should light up
