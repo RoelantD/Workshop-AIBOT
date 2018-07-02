@@ -1,18 +1,19 @@
 # Setup the board
 
-### Download and install IoT dashboard
+#### 1. Download and install IoT dashboard
 Download and install the IoT dashboard tool. 
 [Download](http://go.microsoft.com/fwlink/?LinkID=708576)
 
-### Connect the wires
+#### 2. Connect the wires
 ![](Assets/wires.png)
 
-### Bootup the device
+#### 3. Bootup the device
 Connect the Raspberry to the power.
 
-
 ### Open the dashboard
-
+* Open the IoT Dashboard tool and find your device in the list. 
+* Click on the ... under actions and select "Open device portal"
+* Login in to the device using the details below 
 | Username | Password |
 | --- | --- |
 | administrator | 123456 |
