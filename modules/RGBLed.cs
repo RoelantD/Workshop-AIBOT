@@ -67,24 +67,28 @@ namespace RaspberryModules.App.Modules
                         _redpin.Write(GpioPinValue.Low);
                         _bluepin.Write(GpioPinValue.High);
                         _greenpin.Write(GpioPinValue.High);
+                        Debug.WriteLine("LED RED ON");
                         break;
 
                     case LedStatus.Green:
                         _redpin.Write(GpioPinValue.High);
                         _greenpin.Write(GpioPinValue.Low);
                         _bluepin.Write(GpioPinValue.High);
+                        Debug.WriteLine("LED GREEN ON");
                         break;
 
                     case LedStatus.Blue:
                         _redpin.Write(GpioPinValue.High);
                         _greenpin.Write(GpioPinValue.High);
                         _bluepin.Write(GpioPinValue.Low);
+                        Debug.WriteLine("LED BLUE ON");
                         break;
 
                     case LedStatus.Purple:
                         _redpin.Write(GpioPinValue.Low);
                         _greenpin.Write(GpioPinValue.High);
                         _bluepin.Write(GpioPinValue.Low);
+                        Debug.WriteLine("LED PURPLE ON");
                         break;
                 }
             }
