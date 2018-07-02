@@ -22,9 +22,10 @@ Connect to the workshop WiFi
 | 8:00 - 8:30 | Introduction
 | 8:30 - 9:30 | Exercise 1 & Exercise 2
 | 09:30 - 10:00 | Coffee break
-| 10:00 - 11:00 | Cognitive Services
-| 11:00 - 12:00 | Introduction to the Challenges
-| 12:00 - 13:00 | Lunch
+| 10:00 - 10:30 | Cognitive Services
+| 10:30 - 11:00 | Introduction to the Challenges
+| 11:00 - 12:30 | Challenges
+| 12:30 - 13:30 | Lunch
 | 13:00 - 17:00 | Challenges
 
 ## Exercises
