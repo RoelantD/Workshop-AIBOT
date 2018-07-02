@@ -20,7 +20,7 @@ Connect the Raspberry to the power.
 | administrator | 123456 |
 
 * Have a look around in the dashboard
-
+![](Assets/001.jpg)
 
 ### 5. Install the program
 
