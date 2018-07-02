@@ -88,6 +88,10 @@ namespace RaspberryModules.App.Modules
                         break;
                 }
             }
+            else
+            {
+                Debug.WriteLine($"LED {ledStatus} ON (RGB Led not found)");
+            }
         }
 
         public void TurnOffLed()
@@ -97,6 +101,11 @@ namespace RaspberryModules.App.Modules
                 _redpin.Write(GpioPinValue.High);
                 _greenpin.Write(GpioPinValue.High);
                 _bluepin.Write(GpioPinValue.High);
+                
+            }
+            else
+            {
+                Debug.WriteLine("LED OFF (RGB Led not found)");
             }
         }
     }

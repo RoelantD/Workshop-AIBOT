@@ -188,7 +188,7 @@ await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => StatusText.Text =
 *Don't forget to remove the power*
 
 
-### Adding the motion sensor
+### 3.1 - Adding the motion sensor
 * Open the file: "MainPage.xaml.cs
 * Add this code to the class: "MainPage"
 ```
@@ -232,7 +232,7 @@ if (!_motion)
 }
 ```
 
-### Adding the lights
+### 3.2 - Adding the lights
 * Add the RGBLed module to your project. [View module](../modules/RGBLed.cs)
 * Open the file: "MainPage.xaml.cs
 * Add the property "LedStatus" to the class: "EmotionResult"
@@ -244,12 +244,12 @@ public LedStatus LedStatus { get; set; }
  _rgbLed.TurnOnLed(emotions.OrderByDescending(a => a.Score).First().LedStatus);
 ```
 
-### Run it on the device
+### 3.3 - Run it on the device
 ![alt text](Assets/img_3015.jpg)
 * Select by debug the ARM profile
 * Select "Device"
 * Type the IP address of your Raspberry PI
-* Select by protocol "Windows Universial"
+* Select by protocol "Windows Universal"
 * Click select
 * Click the green play button to debug your solution on the PI
 * The first time it can take a while to deploy, so this is a good time for some coffee!
