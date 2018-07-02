@@ -13,7 +13,7 @@ Connect the Raspberry to the power.
 
 ### Open the dashboard
 
-|Username|Password|
+| Username | Password |
 | --- | --- |
 | administrator | 123456 |
 
