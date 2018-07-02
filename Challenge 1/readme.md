@@ -260,7 +260,7 @@ SayAsync("Turning the light off.");
 * Select by debug the ARM profile
 * Select "Device"
 * Type the IP address of your Raspberry PI
-* Select by protocol "Windows Universial"
+* Select by protocol "Windows Universal"
 * Click select
 * Click the green play button to debug your solution on the PI
 * The first time it can take a while to deploy, so this is a good time for some coffee!
