@@ -12,7 +12,7 @@ Connect the Raspberry to the power.
 
 ### 4. Open the dashboard
 * Open the IoT Dashboard tool and find your device in the list. 
-* Click on the ... under actions and select "Open device portal"
+* Click on the ... under actions and select "Open device in portal"
 * Login in to the device using the details below 
 
 | Username | Password |
@@ -23,7 +23,9 @@ Connect the Raspberry to the power.
 ![](Assets/001.jpg)
 
 ### 5. Install the program
-
+* Download the sample [Download](Assets/BootcampSample.zip)
+* Unzip "BootcampSample.zip"
+* 
 
 ### 6. Validate your setup
 - RGB Led - Should be showing every 1 second a different color
