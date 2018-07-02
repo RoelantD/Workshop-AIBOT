@@ -67,14 +67,14 @@
 
 #### 2.1 Create the app
 
-![](Assets/img_luis_3010.jpg)
+![](Assets/img_3010.jpg)
 * File > New Project
 * Select: Visual C > Windows Universial > Blank App (Universial App)
 * Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
 
 #### 2.2 Enable the Microphone
 
-![](Assets/img_luis_3011.jpg)
+![](Assets/img_3011.jpg)
 
 * Open the "Package.appxmanifest" file
 * Open the tab: "Capabilities"
