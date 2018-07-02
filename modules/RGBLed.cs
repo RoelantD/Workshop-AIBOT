@@ -4,7 +4,7 @@ using Windows.Devices.Gpio;
 
 namespace RaspberryModules.App.Modules
 {
-    public enum LedStatus { Red, Green, Blue };
+    public enum LedStatus { Red, Green, Blue, Purple };
 
     public class RGBLed
     {
@@ -27,7 +27,7 @@ namespace RaspberryModules.App.Modules
                 _bluepin = gpio.OpenPin(13);
                 if (_bluepin != null)
                 {
-                    _bluepin.Write(GpioPinValue.Low);
+                    _bluepin.Write(GpioPinValue.High);
                     _bluepin.SetDriveMode(GpioPinDriveMode.Output);
                 }
 
@@ -35,7 +35,7 @@ namespace RaspberryModules.App.Modules
                 _greenpin = gpio.OpenPin(6);
                 if (_greenpin != null)
                 {
-                    _greenpin.Write(GpioPinValue.Low);
+                    _greenpin.Write(GpioPinValue.High);
                     _greenpin.SetDriveMode(GpioPinDriveMode.Output);
                 }
 
@@ -43,7 +43,7 @@ namespace RaspberryModules.App.Modules
                 _redpin = gpio.OpenPin(5);
                 if (_redpin != null)
                 {
-                    _redpin.Write(GpioPinValue.Low);
+                    _redpin.Write(GpioPinValue.High);
                     _redpin.SetDriveMode(GpioPinDriveMode.Output);
                 }
 
@@ -64,36 +64,40 @@ namespace RaspberryModules.App.Modules
                 switch (ledStatus)
                 {
                     case LedStatus.Red:
-                        _redpin.Write(GpioPinValue.High);
-                        _bluepin.Write(GpioPinValue.Low);
-                        _greenpin.Write(GpioPinValue.Low);
+                        _redpin.Write(GpioPinValue.Low);
+                        _bluepin.Write(GpioPinValue.High);
+                        _greenpin.Write(GpioPinValue.High);
                         break;
 
                     case LedStatus.Green:
-                        _redpin.Write(GpioPinValue.Low);
+                        _redpin.Write(GpioPinValue.High);
+                        _greenpin.Write(GpioPinValue.Low);
+                        _bluepin.Write(GpioPinValue.High);
+                        break;
+
+                    case LedStatus.Blue:
+                        _redpin.Write(GpioPinValue.High);
                         _greenpin.Write(GpioPinValue.High);
                         _bluepin.Write(GpioPinValue.Low);
                         break;
 
-                    case LedStatus.Blue:
+                    case LedStatus.Purple:
                         _redpin.Write(GpioPinValue.Low);
-                        _greenpin.Write(GpioPinValue.Low);
-                        _bluepin.Write(GpioPinValue.High);
+                        _greenpin.Write(GpioPinValue.High);
+                        _bluepin.Write(GpioPinValue.Low);
                         break;
                 }
             }
         }
 
-        private void TurnOffLed()
+        public void TurnOffLed()
         {
             if (IsEnabled)
             {
-                _redpin.Write(GpioPinValue.Low);
-                _greenpin.Write(GpioPinValue.Low);
-                _bluepin.Write(GpioPinValue.Low);
+                _redpin.Write(GpioPinValue.High);
+                _greenpin.Write(GpioPinValue.High);
+                _bluepin.Write(GpioPinValue.High);
             }
         }
-
-
     }
 }
