@@ -101,6 +101,7 @@ namespace RaspberryModules.App.Modules
                 _redpin.Write(GpioPinValue.High);
                 _greenpin.Write(GpioPinValue.High);
                 _bluepin.Write(GpioPinValue.High);
+                Debug.WriteLine("LED OFF");
             }
         }
     }
