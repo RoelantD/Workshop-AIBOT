@@ -32,9 +32,11 @@ Connect to the workshop WiFi
 
 #### Exercise 1 - Setup the board
 In this first exercise we are going to connect all the sensors to the RaspBerry PI.
+[Open exercise](Exercise%201/readme.md)
 
 #### Exercise 2 - Setup your workstation
 In this exercise we are going to deploy a Hello World app to the Raspberry
+[Open exercise](Exercise%202/readme.md)
 
 ## Challenges
 
