@@ -9,7 +9,5 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox HorizontalAlignment="Center" Margin="0,0,0,0" Text="" Name="SpeechResult" VerticalAlignment="Center" Width="600"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,100,0,0" Text="" Name="LuisResult" VerticalAlignment="Center" Width="600"/>
     </Grid>
 </Page>

@@ -99,7 +99,5 @@ namespace RaspberryModules.App.Modules
                 _bluepin.Write(GpioPinValue.High);
             }
         }
-
-
     }
 }
