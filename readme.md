@@ -53,5 +53,5 @@ In this challenge you are going to teach your PI to detect objects.
 [Open challenge](Challenge%203/readme.md)
 
 #### Challenge 4 - Security PI
-In this challenge you are going to transform your PI in a security system.    
+In this challenge you are going to transform your PI into a security system.    
 [Open challenge](Challenge%204/readme.md)
