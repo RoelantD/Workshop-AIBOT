@@ -265,7 +265,7 @@ SayAsync("Turning the light off.");
 * Click the green play button to debug your solution on the PI
 * The first time it can take a while to deploy, so this is a good time for some coffee!
 
-## Optional
+## Part 4 - Optional
 * Ask the PI more questions:
    * Eej PI what is my age? (Face API)
    * Eej PI who I'm I? (Face API)
