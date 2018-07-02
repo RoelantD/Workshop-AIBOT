@@ -194,12 +194,54 @@ public void HandleLuisResult(LuisResult result)
    }
 }
 ```
+* Add this line to "ContinuousRecognitionSession_ResultGenerated" method just above the debug line.
+```
+HandleLuisResult(result);
+```
+* Run the application and validate your program in the debug window
 
-
+  
+* If you want the application only to responde to a specific keyword you can just wrap the code in the method "ContinuousRecognitionSession_ResultGenerated" with:
+```
+if (speechResult.ToLower().StartsWith("hey"))
+{
+   // CODE HERE
+}
+```
 
 ### 2.5 Speak
+* Open the file: "MainPage.xaml.cs
+* Add this code* Add this code to the class: "MainPage"
+```
+private readonly SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
+private readonly MediaPlayer _speechPlayer = new MediaPlayer();
 
+public async Task SayAsync(string text)
+{
+   using (var stream = await _synthesizer.SynthesizeTextToStreamAsync(text))
+   {
+       _speechPlayer.Source = MediaSource.CreateFromStream(stream, stream.ContentType);
+   }
+   _speechPlayer.Play();
+}
 
+```
+* Add this lines at the end of the "OnNavigatedTo" method.
+```
+var voice = SpeechSynthesizer.AllVoices.FirstOrDefault(i => i.Gender == VoiceGender.Female) ?? SpeechSynthesizer.DefaultVoice;
+_synthesizer.Voice = voice;         
+```
+* Replace the line "// INSERT SPEECH-1" with:
+```
+ SayAsync($"Turning on the {ledColor} light.");
+```
+
+* Replace the line "// INSERT SPEECH-2" with:
+```
+SayAsync("Turning the light off.");
+```
+
+* Put in your headphone and validate that you hear the spoken text
 
 
 
@@ -211,4 +253,16 @@ public void HandleLuisResult(LuisResult result)
 
 *Don't forget to remove the power*
 
+### Run it on the device
+![alt text](Assets/img_3015.jpg)
+* Select by debug the ARM profile
+* Select "Device"
+* Type the IP address of your Raspberry PI
+* Select by protocol "Windows Universial"
+* Click select
+* Click the green play button to debug your solution on the PI
+* The first time it can take a while to deploy, so this is a good time for some coffee!
+
+## Optional
+* Ask the PI more question
 
