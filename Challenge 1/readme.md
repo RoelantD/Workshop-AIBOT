@@ -113,15 +113,94 @@ private async void ContinuousRecognitionSession_ResultGenerated(SpeechContinuous
 ![](Assets/img_chall_app_001.JPG)
 
 ### 2.4 Understand
+* Add the nuget package: "Microsoft.Cognitive.LUIS" to the solution
+* Open the file: "MainPage.xaml.cs
+* Add this code to the class: "MainPage"
+```
+private readonly string _luiskey = "<LUIS KEY>";
+
+private readonly string _appId = "<APP ID>";
+```
+*You can find this keys on www.luis.ai*
+
+* Add this code to the method: "ContinuousRecognitionSession_ResultGenerated"
+```
+LuisClient client = new LuisClient(_appId,_luiskey);
+LuisResult result = await client.Predict(speechResult);
+
+Debug.WriteLine($"LUIS Result: {result.Intents.First().Name} {string.Join(",", result.Entities.Select(a => $"{a.Key}:{a.Value.First().Value}"))}");
+```
+* Run the application and validate that you see what say in the debug output
+* Ask "Turn on the blue light". I you debug window you should see: "LUIS Result: ControlLED LedColor:blue,LedState:on"
+
+
+### 2.6 Act
+* Add the RGBLed module to your project. [View module](../modules/RGBLed.cs)
+* Open the file: "MainPage.xaml.cs
+* Add this code* Add this code to the class: "MainPage"
+```
+private readonly RGBLed _rgbLed = new RGBLed();
+
+public void HandleLuisResult(LuisResult result)
+{
+   if (!result.Intents.Any())
+   {
+       return;
+   }
+
+   switch (result.Intents.First().Name)
+   {
+       case "ControlLED":
+
+           if (result.Entities.Any(a => a.Key == "LedState"))
+           {
+               string ledState = result.Entities.First(a => a.Key == "LedState").Value.First().Value;
+
+               if (ledState == "on")
+               {
+                   if (result.Entities.Any(a => a.Key == "LedColor"))
+                   {
+                       string ledColor = result.Entities.First(a => a.Key == "LedColor").Value.First().Value;
+
+                        // INSERT SPEECH-1
+
+                       switch (ledColor)
+                       {
+                           case "red":
+                               _rgbLed.TurnOnLed(LedStatus.Red);
+                               break;
+
+                           case "green":
+                               _rgbLed.TurnOnLed(LedStatus.Green);
+                               break;
+
+                           case "blue":
+                               _rgbLed.TurnOnLed(LedStatus.Blue);
+                               break;
+
+                           case "purple":
+                               _rgbLed.TurnOnLed(LedStatus.Purple);
+                               break;
+                       }
+                   }
+               }
+               else if (ledState == "off")
+               {
+                   // INSERT SPEECH-2
+                   _rgbLed.TurnOffLed();
+               }
+           }
+           break;
+   }
+}
+```
+
 
 
 ### 2.5 Speak
 
 
-### 2.6 Act
 
-### 
-* Add the nuget package: "Microsoft.Cognitive.LUIS"
 
 
 ## Part 3 - Run it on the RaspBerry PI 3
