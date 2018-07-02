@@ -71,6 +71,7 @@ namespace Ask_me_PI.App
         {
             string speechResult = args.Result.Text;
             Debug.WriteLine($"Heared: {speechResult}");
+            Debug.WriteLine($"Text: {speechResult}");
 
             if (speechResult.ToLower().StartsWith("hey"))
             {
