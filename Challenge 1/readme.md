@@ -246,6 +246,8 @@ SayAsync("Turning the light off.");
 
 
 ## Part 3 - Run it on the RaspBerry PI 3
+
+### 3.1 - Connect the wires
 ![alt text](Assets/challenge_1_bb.png)  
 
 * Connect the display to the RaspBerry
@@ -253,7 +255,7 @@ SayAsync("Turning the light off.");
 
 *Don't forget to remove the power*
 
-### Run it on the device
+### 3.2 - Deploy and run it on the device
 ![alt text](Assets/img_3015.jpg)
 * Select by debug the ARM profile
 * Select "Device"
@@ -265,4 +267,3 @@ SayAsync("Turning the light off.");
 
 ## Optional
 * Ask the PI more question
-
