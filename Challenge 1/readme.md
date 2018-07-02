@@ -65,14 +65,14 @@
 
 ## Part 2 - Build the UWP App
 
-#### 2.1 Create the app
+### 2.1 Create the app
 
 ![](Assets/img_3010.jpg)
 * File > New Project
 * Select: Visual C > Windows Universial > Blank App (Universial App)
 * Select: Build 17134 (If you don't see this version please go back to the requirements for this workshop)
 
-#### 2.2 Enable the Microphone
+### 2.2 Enable the Microphone
 
 ![](Assets/img_3011.jpg)
 
@@ -81,11 +81,22 @@
 * Check the checkbox "Webcam"
 * Check the checkbox "Microphone"
 
-#### 2.3 Listen
+### 2.3 Listen
 
 * Open the file: "MainPage.xaml.cs
 * Add this code to the class: "MainPage"
 ```
+private SpeechRecognizer _contSpeechRecognizer;
+
+protected override async void OnNavigatedTo(NavigationEventArgs e)
+{
+   _contSpeechRecognizer = new SpeechRecognizer();
+   await _contSpeechRecognizer.CompileConstraintsAsync();
+   _contSpeechRecognizer.ContinuousRecognitionSession.ResultGenerated +=ContinuousRecognitionSession_ResultGenerated;
+   _contSpeechRecognizer.ContinuousRecognitionSession.Completed += ContinuousRecognitionSession_Completed;
+   await _contSpeechRecognizer.ContinuousRecognitionSession.StartAsync();
+}
+
 private async void ContinuousRecognitionSession_Completed(SpeechContinuousRecognitionSession sender, SpeechContinuousRecognitionCompletedEventArgs args)
 {
    Debug.WriteLine($"Completed > Restart listening");
@@ -101,13 +112,13 @@ private async void ContinuousRecognitionSession_ResultGenerated(SpeechContinuous
 * Run the application and validate that you see what say in the debug output
 ![](Assets/img_chall_app_001.JPG)
 
-#### 2.4 Understand
+### 2.4 Understand
 
 
-#### 2.5 Speak
+### 2.5 Speak
 
 
-#### 2.6 Act
+### 2.6 Act
 
 ### 
 * Add the nuget package: "Microsoft.Cognitive.LUIS"
