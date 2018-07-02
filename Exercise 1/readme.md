@@ -14,9 +14,12 @@ Connect the Raspberry to the power.
 * Open the IoT Dashboard tool and find your device in the list. 
 * Click on the ... under actions and select "Open device portal"
 * Login in to the device using the details below 
+
 | Username | Password |
 | --- | --- |
 | administrator | 123456 |
+
+* Have a look around in the dashboard
 
 
 ### Install the program
