@@ -41,7 +41,7 @@ In this exercise, we are going to deploy a Hello World app to the Raspberry.
 ## Challenges
 
 #### Challenge 1 - Ask me Pi
-In this challenge, you are going to make you Pi listen to you.     
+In this challenge, you are going to make your Pi listen to you.     
 [Open challenge](Challenge%201/readme.md)
 
 #### Challenge 2 - Mood Pi
