@@ -1,7 +1,7 @@
 # Build your own A.I. powered robot
 **With the rise of new rapidly evolving interfaces and an explosion in intelligence services the need to jump on this track is more relevant than ever. With the commodity of hardware and the computing power of Azure Cloud, Artificial Intelligence is at our fingertips and waiting to be implemented in new innovative solutions.**
 
-In this workshop, we give you a quick start in this new world and introduce you to Windows IoT, micro controllers with some sensors and the power of Microsoft Cognitive Services. 
+In this workshop, we give you a quick start in this new world and introduce you to Windows IoT, microcontrollers with some sensors and the power of Microsoft Cognitive Services. 
 
 You are going to make a chatbot, not a boring one in a browser that can order airplane tickets for you, but a real robot that can talk to you and uses its vision and voice to interact with its surroundings.
 
@@ -31,27 +31,27 @@ Connect to the workshop WiFi
 ## Exercises
 
 #### Exercise 1 - Setup the board
-In this first exercise we are going to connect all the sensors to the RaspBerry PI.   
+In this first exercise, we are going to connect all the sensors to the Raspberry Pi.   
 [Open exercise](Exercise%201/readme.md)
 
 #### Exercise 2 - Setup your workstation
-In this exercise we are going to deploy a Hello World app to the Raspberry.   
+In this exercise, we are going to deploy a Hello World app to the Raspberry.   
 [Open exercise](Exercise%202/readme.md)
 
 ## Challenges
 
-#### Challenge 1 - Ask me PI
-In this challenge you are going to make you PI listen to you.     
+#### Challenge 1 - Ask me Pi
+In this challenge, you are going to make you Pi listen to you.     
 [Open challenge](Challenge%201/readme.md)
 
-#### Challenge 2 - Mood PI
-In this challenge you are going to make the PI is reflect you mood.    
+#### Challenge 2 - Mood Pi
+In this challenge, you are going to make the Pi reflect your mood.    
 [Open challenge](Challenge%202/readme.md)
 
-#### Challenge 3 - The Seeing PI
-In this challenge you are going to teach your PI to detect objects.    
+#### Challenge 3 - The Seeing Pi
+In this challenge, you are going to teach your Pi to detect objects.    
 [Open challenge](Challenge%203/readme.md)
 
-#### Challenge 4 - Security PI
-In this challenge you are going to transform your PI into a security system.    
+#### Challenge 4 - Security Pi
+In this challenge, you are going to transform your Pi into a security system.    
 [Open challenge](Challenge%204/readme.md)
