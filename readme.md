@@ -60,6 +60,6 @@ In this challenge, you are going to make the Pi reflect your mood.
 In this challenge, you are going to teach your Pi to detect objects.    
 [Open challenge](Challenge%203/readme.md)
 
-#### Challenge 4 - Security Pi
+#### Unavailable: Challenge 4 - Security Pi
 In this challenge, you are going to transform your Pi into a security system.    
 [Open challenge](Challenge%204/readme.md)
