@@ -23,9 +23,18 @@ Connect the Raspberry to the power.
 ![](Assets/001.jpg)
 
 ### 5. Install the program
-* Download the sample [Download](Assets/BootcampSample.zip)
-* Unzip "BootcampSample.zip"
-* XX
+* Download the sample [Download](Assets/WorkshopDemo.zip)
+* Unzip "WorkshopDemo.zip"
+* In the device portal go to: Apps > Apps Manager
+* *If you see the app: "WorkshopDemo" use the right dropdown to uninstall it*
+* Click the "add" button
+* Upload the file "WorkshopDemo_1.2.3.0_x86_x64_arm_Debug.appxbundle"
+* Check the box by: "I want to specify framework packages"
+* Upload the files: "Microsoft.NET.CoreRuntime.2.1.appx" and "Microsoft.VCLibs.ARM.Debug.14.00.appx"
+* Click the blue button "Start"
+* After uploading click done, you should see "WorkshopDemo" in the list of apps
+* In the actions dropdown click: Start
+* The application should startup and the motion sensor, leds and screen should be working.
 
 ### 6. Validate your setup
 - RGB Led - Should be showing every 1 second a different color
