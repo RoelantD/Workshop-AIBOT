@@ -12,7 +12,7 @@
 ![](../Challenge%202/Assets/img_3015.jpg)
 
 * Select by debug the ARM profile
-* Select "Device"
+* Select "Remote device"
 * Type the IP address of your Raspberry PI
 * Select by protocol "Windows Universal"
 * Click select
