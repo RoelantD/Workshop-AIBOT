@@ -16,7 +16,15 @@ Connect to the workshop WiFi
 | --- | --- |
 | AIWorkshop | HerOes2018
 
-## Schedule
+
+## Schedule Evening workshop
+| Time | Topic |
+| --- | --- |
+| 18:30 - 19:30 | Introduction / Cognitive Services / Challenges
+| 19:30 - 21:30 | Exercises & Challenges
+
+
+## Schedule Full day workshop
 | Time | Topic |
 | --- | --- |
 | 8:00 - 8:30 | Introduction
