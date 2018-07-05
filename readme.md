@@ -44,7 +44,7 @@ In this first exercise, we are going to connect all the sensors to the Raspberry
 
 #### Exercise 2 - Setup your workstation
 In this exercise, we are going to deploy a Hello World app to the Raspberry.   
-[Open exercise](Exercise%202/readme.md)
+[Open exercise](Exercise%202/Readme.md)
 
 ## Challenges
 
