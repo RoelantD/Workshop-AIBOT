@@ -9,9 +9,12 @@ Download and install the IoT dashboard tool.
 
 #### 2.1 Connect the LED
 ![](Assets/led.JPG)
+* The Cathode is connected to the red wire
 
 #### 2.2 Connect the Motion Sensor
 ![](Assets/motion.JPG)
+* Place the jumper in H repeat trigger
+* Play around with the sensitivity and delay when the program is running
 
 ### 3. Bootup the device
 Connect the Raspberry to the power.
