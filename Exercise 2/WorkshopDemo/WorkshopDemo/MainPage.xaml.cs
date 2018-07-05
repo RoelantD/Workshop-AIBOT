@@ -7,6 +7,7 @@ using Windows.Devices.Gpio;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using RaspberryModules.App.Modules;
+using WorkshopDemo.Modules;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -24,6 +25,9 @@ namespace WorkshopDemo
             Init_LEDS();
             InitScreen();
 
+            // Yello LED
+            yellowLEd.Init(26);
+            yellowLEd.TurnOff();
 
             // RGB LED Disco
             _rgbLed.Init();
@@ -56,29 +60,24 @@ namespace WorkshopDemo
 
         private RGBLed _rgbLed = new RGBLed();
 
+        private SingleLED yellowLEd = new SingleLED();
+
         private void Init_LEDS()
         {
-            // Init the LED
-            var gpio = GpioController.GetDefault();
-
-  
-
-            // Init Yellow Led
-            _yellowpin = gpio.OpenPin(26);
-            if (_yellowpin != null)
-            {
-                _yellowpin.Write(GpioPinValue.Low);
-                _yellowpin.SetDriveMode(GpioPinDriveMode.Output);
-            }
-
             // Init the motion Sensor
-            _motionPin = gpio.OpenPin(21);
-            if (_motionPin != null)
+            try
             {
-                _motionPin.SetDriveMode(GpioPinDriveMode.Input);
-                _motionPin.ValueChanged += PirSensorChanged;
+                var gpio = GpioController.GetDefault();
+                _motionPin = gpio.OpenPin(21);
+                if (_motionPin != null)
+                {
+                    _motionPin.SetDriveMode(GpioPinDriveMode.Input);
+                    _motionPin.ValueChanged += PirSensorChanged;
+                }
             }
-
+            catch (Exception e)
+            {
+            }
         }
 
         private void DoDisco(object source, ElapsedEventArgs e)
@@ -102,12 +101,12 @@ namespace WorkshopDemo
             if (motion)
             {
                 Debug.WriteLine("Motion Detected");
-                _yellowpin.Write(GpioPinValue.High);
-              }
+                yellowLEd.TurnOn();
+            }
             else
             {
                 Debug.WriteLine("No Motion Detected");
-                _yellowpin.Write(GpioPinValue.Low);
+                yellowLEd.TurnOff();
             }
         }
     }

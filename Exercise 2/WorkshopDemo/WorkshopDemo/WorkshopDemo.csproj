@@ -107,6 +107,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modules\RGBLed.cs" />
+    <Compile Include="Modules\SingleLED.cs" />
     <Compile Include="Modules\SPIDisplay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
