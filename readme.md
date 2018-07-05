@@ -54,7 +54,7 @@ In this challenge, you are going to make your Pi listen to you.
 
 #### Challenge 2 - Mood Pi
 In this challenge, you are going to make the Pi reflect your mood.    
-[Open challenge](Challenge%202/readme.md)
+[Open challenge](Challenge%202/Readme.md)
 
 #### Challenge 3 - The Seeing Pi
 In this challenge, you are going to teach your Pi to detect objects.    
