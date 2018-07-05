@@ -5,7 +5,7 @@ Download and install the IoT dashboard tool.
 [Download](http://go.microsoft.com/fwlink/?LinkID=708576)
 
 ### 2. Connect the wires
-![](Assets/wires.png)
+![](Assets/basesetup_1_bb.png)
 
 ### 3. Bootup the device
 Connect the Raspberry to the power.
@@ -25,7 +25,7 @@ Connect the Raspberry to the power.
 ### 5. Install the program
 * Download the sample [Download](Assets/BootcampSample.zip)
 * Unzip "BootcampSample.zip"
-* 
+* XX
 
 ### 6. Validate your setup
 - RGB Led - Should be showing every 1 second a different color
