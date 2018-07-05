@@ -7,6 +7,12 @@ Download and install the IoT dashboard tool.
 ### 2. Connect the wires
 ![](Assets/basesetup_1_bb.png)
 
+#### 2.1 Connect the LED
+![](Assets/led.JPG)
+
+#### 2.2 Connect the Motion Sensor
+![](Assets/motion.JPG)
+
 ### 3. Bootup the device
 Connect the Raspberry to the power.
 
