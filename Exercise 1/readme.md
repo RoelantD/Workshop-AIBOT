@@ -47,5 +47,5 @@ Connect the Raspberry to the power.
 
 ### 6. Validate your setup
 - RGB Led - Should be showing every 1 second a different color
-- Display - Should show the current time & temperature
+- Display - Should show the current time
 - Motion Sensor / Yellow LED - When motion is triggered the yellow led should light up
