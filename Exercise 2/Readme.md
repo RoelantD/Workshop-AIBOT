@@ -1,6 +1,6 @@
 # Setup your workstation
 
-### 1.1 - Run the solution localy
+### 1.1 - Run the solution locally
 
 * Download the sample app [download](Assets/DemoWorkshopApp.zip)
 * Unzip the DemoWorkshopApp.zip
