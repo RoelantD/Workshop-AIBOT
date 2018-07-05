@@ -1,6 +1,6 @@
 # Setup your workstation
 
-### Run the solution localy
+### 1.1 - Run the solution localy
 
 * Download the sample app [download](Assets/DemoWorkshopApp.zip)
 * Unzip the DemoWorkshopApp.zip
@@ -8,7 +8,7 @@
 * Build the solution for X86 in Debug mode
 * Debug the project validate that you see: "I'm working!"
 
-### Deploy it to the Raspberry Pi
+### 1.2 - Deploy it to the Raspberry Pi
 ![](../Challenge%202/Assets/img_3015.jpg)
 
 * Select by debug the ARM profile
