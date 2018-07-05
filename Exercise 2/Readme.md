@@ -4,8 +4,8 @@
 
 * Download the sample app [download](Assets/DemoWorkshopApp.zip)
 * Unzip the DemoWorkshopApp.zip
-* Open the Solution with Visual Studio
-* Build the solution for X86 in Debug mode
+* Open the "WorkshopDemo.csproj" project with Visual Studio
+* Build the solution for **X86** in Debug mode
 * Debug the project validate that you see: "I'm working!"
 
 ### 1.2 - Deploy it to the Raspberry Pi
